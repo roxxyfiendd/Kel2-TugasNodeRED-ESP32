@@ -11,10 +11,10 @@ Sistem monitoring suhu dan kelembapan serta kontrol lampu untuk 4 ruangan berbas
 
 | Nama | NRP | Ruangan |
 | ---- | --- | ------- |
-| Rionajib Raditya Marzuq | 2124600081 | ruangN |
-| ISI | ISI | ruangN |
-| ISI | ISI | ruangN |
-| ISI | ISI | ruangN |
+| Rionajib Raditya Marzuq | 2124600081 | ruang1 |
+| Muhammad Rofiul Firdaus | 2124600085 | ruang2 |
+| Muhammad Rafi Kamal | 2124600080 | ruang3 |
+| Mohamad Zakaria | 2124600072 | ruang4 |
 
 ## Arsitektur Sistem
 
