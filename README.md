@@ -45,7 +45,7 @@ Komponen per ruangan:
 | -------- | --------- | ------- |
 | DHT11 VCC | 3.3V | |
 | DHT11 GND | GND | |
-| DHT11 DATA | GPIO16 | ISI jika berbeda |
+| DHT11 DATA | GPIO16 | |
 | LED lampu 1 + resistor 220 Ω | GPIO25 | Anoda ke pin, katoda ke GND lewat resistor |
 | LED lampu 2 + resistor 220 Ω | GPIO26 | Sama seperti lampu 1 |
 
@@ -104,22 +104,22 @@ Dashboard:
 
 | No | Uji | Hasil | Keterangan |
 | -- | --- | ----- | ---------- |
-| T1 | Koneksi (`MQTT Connection established.`) | ✓ / ✗ | |
-| T2 | Data 4 ruang tiap ±5 detik | ✓ / ✗ | |
-| T3 | Chart suhu 4 garis | ✓ / ✗ | |
-| T4 | Sensor berubah hanya di ruang yang dipegang | ✓ / ✗ | |
-| T5 | Lampu tepat sasaran | ✓ / ✗ | |
-| T6 | Matikan lampu | ✓ / ✗ | |
-| T7 | Payload salah diabaikan | ✓ / ✗ | |
-| T8 | Status online | ✓ / ✗ | |
-| T9 | LWT (status jadi offline) | ✓ / ✗ | |
-| T10 | Retained (status tampil setelah restart Node-RED) | ✓ / ✗ | |
-| T11 | Reconnect otomatis | ✓ / ✗ | |
-| T12 | Akses dashboard dari HP | ✓ / ✗ | |
+| T1 | Koneksi (`MQTT Connection established.`) | ✓ | |
+| T2 | Data 4 ruang tiap ±5 detik | ✓ | |
+| T3 | Chart suhu 4 garis | ✓ | |
+| T4 | Sensor berubah hanya di ruang yang dipegang | ✓ | |
+| T5 | Lampu tepat sasaran | ✓ | |
+| T6 | Matikan lampu | ✓ | |
+| T7 | Payload salah diabaikan | ✓ | |
+| T8 | Status online | ✓ | |
+| T9 | LWT (status jadi offline) | ✓ | |
+| T10 | Retained (status tampil setelah restart Node-RED) | ✓ | |
+| T11 | Reconnect otomatis | ✓ | |
+| T12 | Akses dashboard dari HP | ✓ | |
 
 ## Ruangan yang Disimulasikan
 
-ISI. Contoh: "Semua ruangan memakai ESP32 asli" atau "ruang4 disimulasikan memakai flow inject di Node-RED".
+Semua ruangan disimulasikan dengan memakai ESP32 secara bergantian karena hanya menggunakan 1 ESP32.
 
 ## Kendala dan Solusi
 
@@ -133,9 +133,9 @@ ISI. Contoh: "Semua ruangan memakai ESP32 asli" atau "ruang4 disimulasikan memak
 | Anggota | Tugas |
 | ------- | ----- |
 | Rionajib Raditya Marzuq | ISI |
-| ISI | ISI |
-| ISI | ISI |
-| ISI | ISI |
+| Muhammad Rofiul Firdaus | ISI |
+| Muhammad Rafi Kamal | ISI |
+| Mohamad Zakaria | ISI |
 
 ## Struktur Repositori
 
