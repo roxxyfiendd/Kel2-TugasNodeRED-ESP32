@@ -4,8 +4,8 @@
 // ===== GANTI SESUAI KELOMPOK, RUANGAN, DAN JARINGAN =====
 #define KELOMPOK  "klp2"            // nomor kelompok
 #define ROOM      "ruang3"          // ruang1 .. ruang4  (E7: hanya ini yang diganti)
-#define WIFI_SSID "HALO DEK"
-#define WIFI_PASS "11223344"
+#define WIFI_SSID "WIFI_SSID"
+#define WIFI_PASS "WIFI_PASS"
 #define BROKER    "broker.mqttdashboard.com"
 
 // ===== TOPIC & CLIENT ID dibentuk dari KELOMPOK + ROOM (E2, E7) =====
