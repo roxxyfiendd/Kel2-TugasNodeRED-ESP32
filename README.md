@@ -58,8 +58,8 @@ Format: `pens/klp2/<nama_ruang>/<fungsi>`
 
 | Topic | Arah | Payload | QoS | Retain |
 | ----- | ---- | ------- | --- | ------ |
-| `pens/klp2/ruangN/temperature` | ESP32 → Node-RED | °C, 1 desimal | 0 | tidak |
-| `pens/klp2/ruangN/humidity` | ESP32 → Node-RED | %, 1 desimal | 0 | tidak |
+| `pens/klp2/ruangN/temperature` | ESP32 → Node-RED | 28.5 °C | 0 | tidak |
+| `pens/klp2/ruangN/humidity` | ESP32 → Node-RED | 65.0 % | 0 | tidak |
 | `pens/klp2/ruangN/lamp1` | Node-RED → ESP32 | `1` nyala, `0` mati | 1 | tidak |
 | `pens/klp2/ruangN/lamp2` | Node-RED → ESP32 | `1` nyala, `0` mati | 1 | tidak |
 | `pens/klp2/ruangN/status` | ESP32 / LWT | `online` / `offline` | 0 | ya |
