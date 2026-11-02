@@ -38,16 +38,15 @@ Komponen per ruangan:
 - 1x ESP32
 - 1x sensor DHT11
 - 2x LED (lampu 1 dan lampu 2)
-- 2x resistor 220 Ω
 - Kabel jumper dan breadboard
 
 | Komponen | Pin ESP32 | Catatan |
 | -------- | --------- | ------- |
 | DHT11 VCC | 3.3V | |
 | DHT11 GND | GND | |
-| DHT11 DATA | GPIO16 | |
-| LED lampu 1 + resistor 220 Ω | GPIO25 | Anoda ke pin, katoda ke GND lewat resistor |
-| LED lampu 2 + resistor 220 Ω | GPIO26 | Sama seperti lampu 1 |
+| DHT11 DATA | GPIO18 | |
+| LED lampu 1 | GPIO25 | Anoda ke pin, katoda ke GND |
+| LED lampu 2 | GPIO26 | Sama seperti lampu 1 |
 
 Foto rangkaian satu ruangan:
 
