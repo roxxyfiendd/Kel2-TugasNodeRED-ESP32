@@ -38,15 +38,16 @@ Komponen per ruangan:
 - 1x ESP32
 - 1x sensor DHT11
 - 2x LED (lampu 1 dan lampu 2)
+- 2x resistor 220 Ω
 - Kabel jumper dan breadboard
 
 | Komponen | Pin ESP32 | Catatan |
 | -------- | --------- | ------- |
 | DHT11 VCC | 3.3V | |
 | DHT11 GND | GND | |
-| DHT11 DATA | GPIO18 | |
-| LED lampu 1 | GPIO25 | Anoda ke pin, katoda ke GND |
-| LED lampu 2 | GPIO26 | Sama seperti lampu 1 |
+| DHT11 DATA | GPIO16 | |
+| LED lampu 1 + resistor 220 Ω | GPIO25 | Anoda ke pin, katoda ke GND lewat resistor |
+| LED lampu 2 + resistor 220 Ω | GPIO26 | Sama seperti lampu 1 |
 
 Foto rangkaian satu ruangan:
 
@@ -58,8 +59,8 @@ Format: `pens/klp2/<nama_ruang>/<fungsi>`
 
 | Topic | Arah | Payload | QoS | Retain |
 | ----- | ---- | ------- | --- | ------ |
-| `pens/klp2/ruangN/temperature` | ESP32 → Node-RED | 28.5 °C | 0 | tidak |
-| `pens/klp2/ruangN/humidity` | ESP32 → Node-RED | 65.0 % | 0 | tidak |
+| `pens/klp2/ruangN/temperature` | ESP32 → Node-RED | °C, 1 desimal | 0 | tidak |
+| `pens/klp2/ruangN/humidity` | ESP32 → Node-RED | %, 1 desimal | 0 | tidak |
 | `pens/klp2/ruangN/lamp1` | Node-RED → ESP32 | `1` nyala, `0` mati | 1 | tidak |
 | `pens/klp2/ruangN/lamp2` | Node-RED → ESP32 | `1` nyala, `0` mati | 1 | tidak |
 | `pens/klp2/ruangN/status` | ESP32 / LWT | `online` / `offline` | 0 | ya |
@@ -103,18 +104,18 @@ Dashboard:
 
 | No | Uji | Hasil | Keterangan |
 | -- | --- | ----- | ---------- |
-| T1 | Koneksi (`MQTT Connection established.`) | ✓ | |
-| T2 | Data 4 ruang tiap ±5 detik | ✓ | |
-| T3 | Chart suhu 4 garis | ✓ | |
-| T4 | Sensor berubah hanya di ruang yang dipegang | ✓ | |
-| T5 | Lampu tepat sasaran | ✓ | |
-| T6 | Matikan lampu | ✓ | |
-| T7 | Payload salah diabaikan | ✓ | |
-| T8 | Status online | ✓ | |
-| T9 | LWT (status jadi offline) | ✓ | |
-| T10 | Retained (status tampil setelah restart Node-RED) | ✓ | |
-| T11 | Reconnect otomatis | ✓ | |
-| T12 | Akses dashboard dari HP | ✓ | |
+| T1 | Koneksi (`MQTT Connection established.`) | ✓ | sudah berhasil terhubung|
+| T2 | Data 4 ruang tiap ±5 detik | ✓ | sudah sesuai durasi |
+| T3 | Chart suhu 4 garis | ✓ | grafik sudah sesuai |
+| T4 | Sensor berubah hanya di ruang yang dipegang | ✓ | sudah sesuai |
+| T5 | Lampu tepat sasaran | ✓ | sudah berjalan |
+| T6 | Matikan lampu | ✓ | sudah berjalan |
+| T7 | Payload salah diabaikan | ✓ | sudah sesuai |
+| T8 | Status online | ✓ | sudah sesuai |
+| T9 | LWT (status jadi offline) | ✓ | sudah sesuai |
+| T10 | Retained (status tampil setelah restart Node-RED) | ✓ | sudah sesuai |
+| T11 | Reconnect otomatis | ✓ | sudah berjalan |
+| T12 | Akses dashboard dari HP | ✓ | bisa dilakukan |
 
 ## Ruangan yang Disimulasikan
 
@@ -124,18 +125,17 @@ Semua ruangan disimulasikan dengan memakai ESP32 secara bergantian karena hanya 
 
 | Kendala | Solusi |
 | ------- | ------ |
-| Kendala koneksi MQTT | periksa broker dan Wi-Fi |
-| Topic tidak sesuai |  samakan topic pada ESP32 dan Node-RED |
-| Sensor tidak terbaca | periksa pin, catu daya, dan tipe sensor |
+| ISI | ISI |
+| ISI | ISI |
 
 ## Pembagian Tugas
 
 | Anggota | Tugas |
 | ------- | ----- |
-| Rionajib Raditya Marzuq | ISI |
-| Muhammad Rofiul Firdaus | ISI |
-| Muhammad Rafi Kamal | ISI |
-| Mohamad Zakaria | ISI |
+| Rionajib Raditya Marzuq | Laporan dan Setup GitHub|
+| Muhammad Rofiul Firdaus | Program |
+| Muhammad Rafi Kamal | Hardware |
+| Mohamad Zakaria | Integrasi Node RED |
 
 ## Struktur Repositori
 
