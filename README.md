@@ -125,8 +125,9 @@ Semua ruangan disimulasikan dengan memakai ESP32 secara bergantian karena hanya 
 
 | Kendala | Solusi |
 | ------- | ------ |
-| ISI | ISI |
-| ISI | ISI |
+| Kendala koneksi MQTT | periksa broker dan Wi-Fi |
+| Topic tidak sesuai |  samakan topic pada ESP32 dan Node-RED |
+| Sensor tidak terbaca | periksa pin, catu daya, dan tipe sensor |
 
 ## Pembagian Tugas
 
