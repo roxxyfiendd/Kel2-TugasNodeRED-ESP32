@@ -45,7 +45,7 @@ Komponen per ruangan:
 | -------- | --------- | ------- |
 | DHT11 VCC | 3.3V | |
 | DHT11 GND | GND | |
-| DHT11 DATA | GPIO16 | |
+| DHT11 DATA | GPIO18 | |
 | LED lampu 1 + resistor 220 Ω | GPIO25 | Anoda ke pin, katoda ke GND lewat resistor |
 | LED lampu 2 + resistor 220 Ω | GPIO26 | Sama seperti lampu 1 |
 
